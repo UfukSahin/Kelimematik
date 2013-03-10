@@ -15,7 +15,7 @@ var GetQuestions = function(questionCount, callback)
     });
 };
 
-var SendResult = function(results)
+var SendResult = function(results, callback)
 {
     var parameters = "{'GetJsonResults':'" + $.toJSON(results) + "','DeviceID':'" + 1 + "'}";
     

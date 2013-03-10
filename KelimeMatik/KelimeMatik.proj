@@ -37,6 +37,7 @@
     </Folder>
     <Folder Include="images" />
     <Folder Include="scripts\Kelimematik" />
+    <Folder Include="scripts\Kelimematik\Models" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="App_Resources\iOS\icon.png" />
@@ -73,6 +74,8 @@
     <Content Include="scripts\IOSZoom.js" />
     <Content Include="scripts\jquery.json-2.4.min.js" />
     <Content Include="scripts\Kelimematik\Manager.js" />
+    <Content Include="scripts\Kelimematik\Models\QuestionModel.js" />
+    <Content Include="scripts\Kelimematik\Models\ResultModel.js" />
     <Content Include="scripts\Kelimematik\Service.js" />
     <Content Include="scripts\Screen.js" />
     <Content Include="scripts\String.js" />
