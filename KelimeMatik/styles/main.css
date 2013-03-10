@@ -1,7 +1,30 @@
 body
 {
     font: Arial, sans-serif;
+    text-align: center;   
+    
+    background-image:url('../images/pattern.png');
+    background-repeat:repeat;
 }
+
+#top, #bottom, #left, #right {
+	background: #a99752;
+	position: fixed;
+	}
+	#left, #right {
+		top: 0; bottom: 0;
+		width: 6px;
+		}
+		#left { left: 0; }
+		#right { right: 0; }
+		
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 6px;
+		}
+		#top { top: 0; }
+		#bottom { bottom: 0; 
+        }
 
 .buttonArea,
 .footerText,
@@ -25,14 +48,10 @@ body
     padding: 7px;
 }
 
-body
-{
-    text-align: center;
-}
 
 .main_container
 {
-    background-image:url('images/pattern.png'); background-repeat:repeat;
+
 }
 
 .question_text_area
