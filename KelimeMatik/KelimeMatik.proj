@@ -63,6 +63,25 @@
     <Resource Include="App_Resources\Android\drawable-nodpi\splashscreen.9.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\atla.png" />
+    <Content Include="images\bar-sayaci.png" />
+    <Content Include="images\dogru-cevap-sikki.png" />
+    <Content Include="images\dogru.png" />
+    <Content Include="images\kelimematik.png" />
+    <Content Include="images\menu.png" />
+    <Content Include="images\pattern.png" />
+    <Content Include="images\secim-button-sikki.png" />
+    <Content Include="images\secimsiz-buton-sikki.png" />
+    <Content Include="images\skor_dogru.png" />
+    <Content Include="images\skor_facebook.png" />
+    <Content Include="images\skor_skor.png" />
+    <Content Include="images\skor_sure.png" />
+    <Content Include="images\skor_tekrar.png" />
+    <Content Include="images\skor_twitter.png" />
+    <Content Include="images\skor_yanlis.png" />
+    <Content Include="images\soru-sayi-sikki.png" />
+    <Content Include="images\sure-barinin-uc-kismi.png" />
+    <Content Include="images\yanlis-cevap-sikki.png" />
     <Content Include="index.html" />
     <Content Include="kendo\js\jquery.min.js" />
     <Content Include="kendo\js\kendo.mobile.min.js" />
