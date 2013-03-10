@@ -1,4 +1,4 @@
-function QuestionModel(QuestionID, QuestionID, Option1, Option2, Option3, Option4, CorrectOption)
+Questionfunction QuestionModel(QuestionID, QuestionID, Option1, Option2, Option3, Option4, CorrectOption)
 {
     this.QuestionID = QuestionID;
     this.Question = Question;

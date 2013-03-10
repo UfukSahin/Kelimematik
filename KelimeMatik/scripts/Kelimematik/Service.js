@@ -19,8 +19,6 @@ var SendResult = function(results, callback)
 {
     var parameters = "{'GetJsonResults':'" + $.toJSON(results) + "','DeviceID':'" + 1 + "'}";
     
-    alert(parameters);
-    
     $.ajax({ 
         type: "POST",
         url: ApiAddress + "SendResults",
