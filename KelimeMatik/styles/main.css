@@ -24,3 +24,43 @@ body
     color: black;
     padding: 7px;
 }
+
+body
+{
+    text-align: center;
+}
+
+.main_container
+{
+    /* The main container */
+}
+
+.question_text_area
+{
+    border: 1px solid red;
+    width: 80%;
+    margin: 10% auto 0 auto;
+    display: table;
+}
+
+.question_text_inner
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.option_buttons
+{
+    border: 1px solid lime;
+    width: 80%;
+    margin: 5% auto 0 auto;
+}
+
+.option_button
+{
+    width: 100%;
+    margin: 8% 0;
+    height: 16%;
+    display: block;
+    font-size: 1.4em;
+}
