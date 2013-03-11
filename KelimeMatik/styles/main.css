@@ -5,6 +5,7 @@ body
     
     background-image:url('../images/pattern.png');
     background-repeat:repeat;
+    margin:0px; padding:0px;
 }
 
 #top, #bottom, #left, #right {
@@ -25,6 +26,73 @@ body
 		#top { top: 0; }
 		#bottom { bottom: 0; 
         }
+.header
+{
+    width:100%;
+    display: table;
+}
+
+.header_left
+{
+    padding-top: 0.5em;
+    width:25%;
+    display: table-cell;
+    float: left;
+}
+
+.header_center
+{
+    width:50%;
+    vertical-align: top;
+    
+    display: table-cell;
+ }
+
+#menu_button
+{
+    margin-left:15%;
+    width:300%;
+    background: url('../images/menu.png') no-repeat;
+    background-size:contain;
+}
+
+#header_center_true
+{
+    float:left;
+    background: url('../images/dogru.png') no-repeat;
+    background-size:contain;
+    width:45%;
+}
+
+#header_center_false
+{
+    float:right;
+    background: url('../images/yanlis.png') no-repeat;
+    background-size:contain;
+    width:45%;
+}
+
+#skip_button
+{
+    float:right;
+    width:90%;
+    background: url('../images/atla.png') no-repeat;
+    background-size:contain;
+}
+
+
+.auto_height
+{
+    
+}
+
+.header_right
+{
+    width:25%;
+    padding-top: 0.5em;
+ 
+    display: table-cell;
+}
 
 .buttonArea,
 .footerText,
@@ -54,12 +122,89 @@ body
 
 }
 
+
+.progress_bar_holder
+{
+    position:relative;
+    display:table;
+    
+    border: 1px solid purple;
+    margin: 0 auto 0 auto;
+    width: 85%;
+}
+
+#progress_bar_left
+{
+    position:absolute;
+    background: url('../images/sure-barinin-uc-kismi.png') no-repeat;
+    height:100%;
+    width:100px;
+    float:left;
+}
+
+#progress_bar_border
+{
+    margin-top:40px;
+    float:right;
+    border: 2px dotted #050708;
+    height:50%;
+    width:90%;
+    background-color:#ccebf2;
+    
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+#progress_bar
+{
+    height:80%;
+    width:98%;    
+    margin: 1% auto 1% auto;
+    border: 2px solid #030304;
+    background-color: #5e8e9d;
+    
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+
+.question_text_border
+{
+    width: 80%;
+    margin: 0 auto 0 auto;
+    background-color:#e8dcc0;
+    
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    
+    border: 3px dotted #615524;
+}
+
 .question_text_area
 {
-    border: 1px solid red;
-    width: 80%;
-    margin: 10% auto 0 auto;
+    position:relative;
+    border: 3px solid black;
+    width: 100%;
     display: table;
+}
+
+#question_number
+{
+    margin-top:5%;
+    position: absolute;
+    background-image:url('../images/soru-sayi-sikki.png');
+    background-size:contain;
+    height:40%;
+    display:table;
+}
+
+#question_number_text
+{
+    display:table-cell;
+    vertical-align:middle;
 }
 
 .question_text_inner
@@ -70,16 +215,140 @@ body
 
 .option_buttons
 {
-    border: 1px solid lime;
     width: 80%;
     margin: 5% auto 0 auto;
 }
-
-.option_button
+.option_button_border
 {
+    position:relative;
+    display: block;
     width: 100%;
     margin: 8% 0;
     height: 16%;
-    display: block;
-    font-size: 1.4em;
+    
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    
+    border: 2px dotted #a6957b;
+}
+.option_button
+{
+    width:100%;
+    height:100%;
+    font-size: 1.2em;
+    background: #c9b792; /* Old browsers */
+    background: -moz-linear-gradient(top,  #c9b792 0%, #c9b792 50%, #beaa84 50%, #beaa84 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9b792), color-stop(50%,#c9b792), color-stop(50%,#beaa84), color-stop(100%,#beaa84)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #c9b792 0%,#c9b792 50%,#beaa84 50%,#beaa84 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #c9b792 0%,#c9b792 50%,#beaa84 50%,#beaa84 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #c9b792 0%,#c9b792 50%,#beaa84 50%,#beaa84 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #c9b792 0%,#c9b792 50%,#beaa84 50%,#beaa84 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9b792', endColorstr='#beaa84',GradientType=0 ); /* IE6-9 */
+    
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    
+    color: #ffffff;
+    border-width:3px;
+    border-style:solid;
+    
+}
+
+.option_button_default
+{
+    border-color:#3a3818;
+}
+
+.option_button_selected
+{
+    border-color:#691b49;
+}
+
+.option_button_true
+{
+    border-color:#326933;
+}
+
+.option_button_false
+{
+    border-color:#7a1219;
+}
+
+.option_button_image
+{
+    position:absolute; 
+    width:100%;
+    height:84%;
+    
+    left: 0px;
+    top:8%;
+    text-align:left;
+    background-size:contain;
+    display:table;
+}
+
+.option-button-selection
+{
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+}
+.option_button_default_image
+{
+    background:url('../images/secimsiz-buton-sikki.png') no-repeat;
+}
+
+
+.option_button_selected_image
+{
+    background:url('../images/secim-buton-sikki.png') no-repeat;
+}
+
+.option_button_true_image
+{
+    background:url('../images/dogru-cevap-sikki.png') no-repeat;
+}
+
+.option_button_false_image
+{
+    background:url('../images/yanlis-cevap-sikki.png') no-repeat;
+}
+
+.score_content{
+     background: url('../images/skor_skor.png') no-repeat;
+    background-size:contain;
+    width:95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.score_content_border
+{
+    width: 90%;
+    height: 20%;
+    margin: 0 auto 0 auto;
+    background-color:#e8dcc0;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 3px dotted #615524;
+    
+    
+}
+
+.score_center_img{
+}
+
+.score_content_area
+{
+    position:relative;
+    border: 3px solid black;
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+.score_content_images{
 }

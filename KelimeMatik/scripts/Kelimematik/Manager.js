@@ -80,9 +80,6 @@ var QuestionAnswer = function(userChoice)
         // Answer is false
         AnswerFalseCount++;
     }
-    
-    $("#trueAnswers").text(AnswerTrueCount);
-    $("#falseAnswers").text(AnswerFalseCount);
 
     Results[CurrentQuestionNumber - 1] = new ResultModel
     {
@@ -111,5 +108,5 @@ var TestFinish = function()
 }
 
 $(document).ready(function() {
-    InitializeManager();
+    //InitializeManager();
 });

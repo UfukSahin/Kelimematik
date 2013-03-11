@@ -70,7 +70,7 @@
     <Content Include="images\kelimematik.png" />
     <Content Include="images\menu.png" />
     <Content Include="images\pattern.png" />
-    <Content Include="images\secim-button-sikki.png" />
+    <Content Include="images\secim-buton-sikki.png" />
     <Content Include="images\secimsiz-buton-sikki.png" />
     <Content Include="images\skor_dogru.png" />
     <Content Include="images\skor_facebook.png" />
@@ -82,6 +82,7 @@
     <Content Include="images\soru-sayi-sikki.png" />
     <Content Include="images\sure-barinin-uc-kismi.png" />
     <Content Include="images\yanlis-cevap-sikki.png" />
+    <Content Include="images\yanlis.png" />
     <Content Include="index.html" />
     <Content Include="kendo\js\jquery.min.js" />
     <Content Include="kendo\js\kendo.mobile.min.js" />
@@ -91,7 +92,10 @@
     <Content Include="kendo\styles\kendo.mobile.all.min.css" />
     <Content Include="scripts\hello-world.js" />
     <Content Include="scripts\IOSZoom.js" />
+    <Content Include="scripts\jquery.disable.text.select.js" />
+    <Content Include="scripts\jquery.imgscale.js" />
     <Content Include="scripts\jquery.json-2.4.min.js" />
+    <Content Include="scripts\Kelimematik\Button.js" />
     <Content Include="scripts\Kelimematik\Manager.js" />
     <Content Include="scripts\Kelimematik\Models\QuestionModel.js" />
     <Content Include="scripts\Kelimematik\Models\ResultModel.js" />
