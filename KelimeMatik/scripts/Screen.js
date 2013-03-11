@@ -44,8 +44,8 @@ $(document).ready(function() {
        
         // score screen   
         
-        // $(".main_container").hide();
-       //  $(".score_center_img").css("height", $(".header_center_img").css("width"));
+        $(".main_container").hide();
+        $(".score_center_img").css("height", $(".score_center_img").css("width"));
         
         
         //ortak
