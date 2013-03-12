@@ -6,6 +6,8 @@ body
     background-image:url('../images/pattern.png');
     background-repeat:repeat;
     margin:0px; padding:0px;
+    
+    -webkit-user-select: none;
 }
 
 #top, #bottom, #left, #right {

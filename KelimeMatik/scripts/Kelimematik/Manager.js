@@ -9,7 +9,6 @@ var InitializeManager = function()
     
     QuestionCountInTest = 20;
     QuestionDefaultDuration = 20;
-    ProgressBarIntervalValue = 100;
     
     GetQuestions(20, QuestionsLoaded);
 }
@@ -74,7 +73,7 @@ var QuestionLoad = function()
 {
     CurrentQuestion = Questions[CurrentQuestionNumber-1];
     
-    $("#kelimematik_question").text(CurrentQuestion.Question);
+    $(".question_text_inner").text(CurrentQuestion.Question); 
     $("#kelimematik_option_a").text(CurrentQuestion.Option1);
     $("#kelimematik_option_b").text(CurrentQuestion.Option2);
     $("#kelimematik_option_c").text(CurrentQuestion.Option3);
