@@ -1,13 +1,15 @@
 /**
  * Total Question Count
  */
-var QuestionCountInTest = 20;
-var QuestionDefaultDuration = 20;
 
 var InitializeManager = function()
 {
     Questions = [];
     Results = [];
+    
+    QuestionCountInTest = 20;
+    QuestionDefaultDuration = 20;
+    ProgressBarIntervalValue = 100;
     
     GetQuestions(20, QuestionsLoaded);
 }
@@ -21,17 +23,18 @@ var QuestionsLoaded = function(data)
 
 var Start = function()
 {
-    AnswerTrueCount = 0;
+    AnswerTrueCount = 0; 
     AnswerFalseCount = 0;
     CurrentQuestionNumber = 0;
 
     QuestionStart();
     TestStartedOn = new Date().getTime();
+    
+    ProgressBarPercentage = 100;
 }
 
 var QuestionStart = function()
 {
-    
     RemainingTime = QuestionDefaultDuration;
     
     if (CurrentQuestionNumber == QuestionCountInTest)
@@ -46,12 +49,25 @@ var QuestionStart = function()
  
     //AFTER QUESTION LOAD
     QuestionLoadedOn = new Date().getTime();
-    UpdateDurationInterval = setInterval(UpdateDuration(), 1000);
+    
+    ProgressBarInterval = setInterval(function() {UpdateProgressBar()}, 100);
+    UpdateDurationInterval = setInterval(function() {UpdateDuration()}, 1000);
+}
+
+var UpdateProgressBar = function()
+{
+    ProgressBarPercentage -= 0.5;
+    $("#progress_bar").css("width", ProgressBarPercentage + "%");
 }
 
 var UpdateDuration = function()
 {
-    
+    RemainingTime--;
+    if (RemainingTime < 0)
+    {
+        // Skip the question
+        ShowNewQuestion(null);
+    }
 }
 
 var QuestionLoad = function()
@@ -66,9 +82,7 @@ var QuestionLoad = function()
 }
 
 var QuestionAnswer = function(userChoice)
-{
-    window.clearInterval(UpdateDurationInterval);
-    
+{    
     var result = (userChoice == CurrentQuestion.CorrectOption);
     if (result)
     {
@@ -81,11 +95,23 @@ var QuestionAnswer = function(userChoice)
         AnswerFalseCount++;
     }
 
+    ShowNewQuestion(result);
+}
+
+var ShowNewQuestion = function(userAnswer)
+{
+    window.clearInterval(ProgressBarInterval);
+    window.clearInterval(UpdateDurationInterval);
+    
+    ProgressBarPercentage = 100;
+    
+    $("#progress_bar").css("width", "99%");
+    
     Results[CurrentQuestionNumber - 1] = new ResultModel
     {
         AnswerTime = (new Date().getTime() - QuestionLoadedOn) / 1000,
         QuestionID = CurrentQuestion.QuestionID,
-        UserAnswer = result 
+        UserAnswer = userAnswer 
     }
 
     QuestionStart();
@@ -94,19 +120,8 @@ var QuestionAnswer = function(userChoice)
 var TestFinish = function()
 {
     SendResult(Results);
-
-    /*
-    GuiManager.LblGOTotalDuration.text = string.Format("Toplam Sure: {0}",
-                                                       Mathf.RoundToInt(Time.time - _testStartedOn));
-
-    GuiManager.LblTrueAnswerCount.text = string.Format("Dogru Cevap: {0}", AnswerTrueCount);
-    GuiManager.LblFalseAnswerCount.text = string.Format("Yanlis Cevap: {0}", AnswerFalseCount);
-
-    GuiManager.GOScene.gameObject.SetActive(true);
-    GuiManager.TestScene.gameObject.SetActive(false);
-    */
 }
 
 $(document).ready(function() {
-    //InitializeManager();
+    InitializeManager();
 });

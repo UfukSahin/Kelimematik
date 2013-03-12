@@ -137,20 +137,22 @@ body
 {
     position:absolute;
     background: url('../images/sure-barinin-uc-kismi.png') no-repeat;
+    background-size: cover;
     height:100%;
-    width:100px;
     float:left;
+    z-index: 200;
 }
 
 #progress_bar_border
 {
-    margin-top:40px;
-    float:right;
-    border: 2px dotted #050708;
-    height:50%;
+    border: 1px dotted #050708;
+    height:44%;
     width:90%;
     background-color:#ccebf2;
-    
+    position: absolute;
+    left: 7%;
+    top: 31%; 
+    z-index: 190;
     -moz-border-radius: 2px;
     border-radius: 2px;
     -webkit-border-radius: 2px;
@@ -160,9 +162,10 @@ body
 {
     height:80%;
     width:98%;    
-    margin: 1% auto 1% auto;
-    border: 2px solid #030304;
+    margin: 0 auto;
+    border: 1px solid #030304;
     background-color: #5e8e9d;
+    float: left; 
     
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -173,7 +176,7 @@ body
 .question_text_border
 {
     width: 80%;
-    margin: 0 auto 0 auto;
+    margin: 20px auto 0 auto;
     background-color:#e8dcc0;
     
     -moz-border-radius: 5px;
@@ -322,7 +325,8 @@ body
     width:95%;
     margin-left: auto;
     margin-right: auto;
-       
+    position: relative;
+        
 }
 
 .score_content_border

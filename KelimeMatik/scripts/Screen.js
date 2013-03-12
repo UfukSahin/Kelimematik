@@ -3,7 +3,7 @@ var givePercentageHeight = {
     "option_buttons": 0.5,
     "question_text_area": 0.15,
     "header": 0.1,
-    "progress_bar_holder": 0.1,
+    "progress_bar_holder": 0.06,
     
     //score screen
     
@@ -41,10 +41,13 @@ $(document).ready(function() {
         $(".header_center_img").css("height", $(".header_center_img").css("width"));
        
         $(".header_button").css("height", $(".header_button").css("width"));
+        
+        $("#progress_bar_left").css("width", $("#progress_bar_left").css("height"));
+        $("#progress_bar_border, #progress_bar").css("border-width", Math.round(screen.height / 480));
        
         // score screen   
         
-        $(".main_container").hide();
+        //$(".main_container").hide();
         $(".score_center_img").css("height", $(".score_center_img").css("width"));
         
         
