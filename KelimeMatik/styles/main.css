@@ -74,6 +74,19 @@ body
     width:45%;
 }
 
+#header_center_true_text
+{
+    border: 1px solid lime;
+    position: absolute; 
+    bottom: 5px;
+    color: #ffffff;
+}
+
+#header_center_false_text
+{
+
+}
+
 #skip_button
 {
     float:right;
@@ -130,7 +143,6 @@ body
     position:relative;
     display:table;
     
-    border: 1px solid purple;
     margin: 0 auto 0 auto;
     width: 85%;
 }
@@ -178,7 +190,7 @@ body
 .question_text_border
 {
     width: 80%;
-    margin: 20px auto 0 auto;
+    margin: 3% auto 0 auto;
     background-color:#e8dcc0;
     
     -moz-border-radius: 5px;
