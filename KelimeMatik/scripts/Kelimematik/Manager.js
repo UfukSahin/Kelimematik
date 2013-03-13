@@ -1,7 +1,3 @@
-/**
- * Total Question Count
- */
-
 var InitializeManager = function()
 {
     Questions = [];
@@ -38,11 +34,12 @@ var QuestionStart = function()
     
     if (CurrentQuestionNumber == QuestionCountInTest)
     { 
-        TestFinish();
+        Finish();
         return;
     }
         
     CurrentQuestionNumber++;
+    $("#question_number_text").text(CurrentQuestionNumber);
     
     QuestionLoad();
  
@@ -94,6 +91,9 @@ var QuestionAnswer = function(userChoice)
         AnswerFalseCount++;
     }
 
+    $("#header_center_true_text").text(AnswerTrueCount);
+    $("#header_center_false_text").text(AnswerFalseCount);
+    
     ShowNewQuestion(result);
 }
 
@@ -116,7 +116,7 @@ var ShowNewQuestion = function(userAnswer)
     QuestionStart();
 }
 
-var TestFinish = function()
+var Finish = function()
 {
     SendResult(Results);
 }

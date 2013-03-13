@@ -76,15 +76,17 @@ body
 
 #header_center_true_text
 {
-    border: 1px solid lime;
-    position: absolute; 
-    bottom: 5px;
+    display: block;
+    margin-top: 47%;
     color: #ffffff;
+    font-size: 1.5em;
 }
 
 #header_center_false_text
 {
-
+    display: block;
+    margin-top: 47%;
+    color: #ffffff;
 }
 
 #skip_button
@@ -254,6 +256,7 @@ body
     width:100%;
     height:100%;
     font-size: 1.2em;
+    
     background: #c9b792; /* Old browsers */
     background: -moz-linear-gradient(top,  #c9b792 0%, #c9b792 50%, #beaa84 50%, #beaa84 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9b792), color-stop(50%,#c9b792), color-stop(50%,#beaa84), color-stop(100%,#beaa84)); /* Chrome,Safari4+ */
@@ -281,6 +284,9 @@ body
 .option_button_selected
 {
     border-color:#691b49;
+    -webkit-box-shadow: 1px -1px 5px rgba(105, 27, 73, 1); 
+    -moz-box-shadow:    1px -1px 5px rgba(105, 27, 73, 1);
+    box-shadow:         1px -1px 5px rgba(105, 27, 73, 1);
 }
 
 .option_button_true
@@ -304,6 +310,11 @@ body
     text-align:left;
     background-size:contain;
     display:table;
+    
+    border-radius: 50%;
+    border: 3px solid #3a3818;
+    
+    background-color: #c9b792;
 }
 
 .option-button-selection
@@ -312,15 +323,12 @@ body
     vertical-align:middle;
     text-align:center;
 }
-.option_button_default_image
-{
-    background:url('../images/secimsiz-buton-sikki.png') no-repeat;
-}
 
-
-.option_button_selected_image
+.option_button_selection_circle
 {
-    background:url('../images/secim-buton-sikki.png') no-repeat;
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
 }
 
 .option_button_true_image

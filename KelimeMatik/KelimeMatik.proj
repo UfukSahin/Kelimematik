@@ -92,6 +92,7 @@
     <Content Include="kendo\styles\kendo.mobile.all.min.css" />
     <Content Include="scripts\hello-world.js" />
     <Content Include="scripts\IOSZoom.js" />
+    <Content Include="scripts\jquery.color-2.1.0.min.js" />
     <Content Include="scripts\jquery.disable.text.select.js" />
     <Content Include="scripts\jquery.imgscale.js" />
     <Content Include="scripts\jquery.json-2.4.min.js" />
