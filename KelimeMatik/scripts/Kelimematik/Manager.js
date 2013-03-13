@@ -6,6 +6,8 @@ var InitializeManager = function()
     QuestionCountInTest = 20;
     QuestionDefaultDuration = 20;
     
+    QuestionsAreSelectable = true;
+    
     GetQuestions(20, QuestionsLoaded);
 }
 
@@ -79,8 +81,11 @@ var QuestionLoad = function()
 
 var QuestionAnswer = function(userChoice)
 {    
-    var result = (userChoice == CurrentQuestion.CorrectOption);
-    if (result)
+    if (!QuestionsAreSelectable) return;
+    QuestionsAreSelectable = false;
+    
+    QuestionResult = (userChoice == CurrentQuestion.CorrectOption);
+    if (QuestionResult)
     {
         // Answer is true
         AnswerTrueCount++;
@@ -90,17 +95,35 @@ var QuestionAnswer = function(userChoice)
         // Answer is false
         AnswerFalseCount++;
     }
+    
+    window.setTimeout(ShowCorrectAnswer(userChoice), 200);
+}
 
+var ShowCorrectAnswer = function(userChoice)
+{
     $("#header_center_true_text").text(AnswerTrueCount);
     $("#header_center_false_text").text(AnswerFalseCount);
     
-    ShowNewQuestion(result);
+    if (QuestionResult)
+    {
+        TrueSelection($("#kelimematik_option_" + String.fromCharCode(userChoice + 96)).parent());
+    }
+    else
+    {
+        WrongSelection($("#kelimematik_option_" + String.fromCharCode(userChoice + 96)).parent());
+        TrueSelection($("#kelimematik_option_" + String.fromCharCode(CurrentQuestion.CorrectOption + 96)).parent());
+    }
+    
+    window.setTimeout(function() {ShowNewQuestion(QuestionResult)}, (QuestionResult) ? 1000 : 2000);
 }
 
 var ShowNewQuestion = function(userAnswer)
 {
     window.clearInterval(ProgressBarInterval);
     window.clearInterval(UpdateDurationInterval);
+    
+    RevertButtonsToDefault();
+    QuestionsAreSelectable = true;
     
     ProgressBarPercentage = 100;
     
