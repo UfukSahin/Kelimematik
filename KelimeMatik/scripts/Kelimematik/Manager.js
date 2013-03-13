@@ -84,6 +84,9 @@ var QuestionAnswer = function(userChoice)
     if (!QuestionsAreSelectable) return;
     QuestionsAreSelectable = false;
     
+    window.clearInterval(ProgressBarInterval);
+    window.clearInterval(UpdateDurationInterval);
+    
     QuestionResult = (userChoice == CurrentQuestion.CorrectOption);
     if (QuestionResult)
     {
@@ -96,7 +99,7 @@ var QuestionAnswer = function(userChoice)
         AnswerFalseCount++;
     }
     
-    window.setTimeout(ShowCorrectAnswer(userChoice), 200);
+    window.setTimeout(function(){ShowCorrectAnswer(userChoice)}, 200);
 }
 
 var ShowCorrectAnswer = function(userChoice)
