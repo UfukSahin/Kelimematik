@@ -1,6 +1,5 @@
 $(".option_button").live("touchstart", function(e) {
     ButtonSelected($(this));
-    alert(e.originalEvent.target.innerHTML);
 }).live("touchend", function(e) {
 });
 

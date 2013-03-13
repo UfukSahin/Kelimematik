@@ -96,6 +96,7 @@
     <Content Include="scripts\jquery.disable.text.select.js" />
     <Content Include="scripts\jquery.imgscale.js" />
     <Content Include="scripts\jquery.json-2.4.min.js" />
+    <Content Include="scripts\jquery.mobile-1.3.0.min.js" />
     <Content Include="scripts\Kelimematik\Button.js" />
     <Content Include="scripts\Kelimematik\Manager.js" />
     <Content Include="scripts\Kelimematik\Models\QuestionModel.js" />
