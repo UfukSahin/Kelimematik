@@ -6,6 +6,8 @@ $(".option_button").live("touchstart", function(e) {
 
 var ButtonSelected = function(jqueryObj)
 {
+    if (!QuestionsAreSelectable) return;
+    
     jqueryObj.css({borderColor: "#691b49"});
     jqueryObj.find(".option_button_image").css({backgroundColor: "#691b49"});
 }
@@ -27,7 +29,7 @@ var TrueSelection = function(jqueryObj)
 
 var TurnOnButton = function(jqueryObj)
 {    
-    jqueryObj.css({borderColor: "#1e8d46"});
+    jqueryObj.css({borderColor: "#1e8d46"}); 
     jqueryObj.find(".option_button_image").css({backgroundColor: "#1e8d46"});
     window.setTimeout(function() {TurnOffButton(jqueryObj)}, Delay);
 }

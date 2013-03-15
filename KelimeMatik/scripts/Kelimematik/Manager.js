@@ -1,3 +1,5 @@
+var QuestionsAreSelectable = true;
+
 var InitializeManager = function()
 {
     Questions = [];
@@ -5,8 +7,6 @@ var InitializeManager = function()
     
     QuestionCountInTest = 20;
     QuestionDefaultDuration = 20;
-    
-    QuestionsAreSelectable = true;
     
     GetQuestions(20, QuestionsLoaded);
 }
@@ -44,9 +44,12 @@ var QuestionStart = function()
     $("#question_number_text").text(CurrentQuestionNumber);
     
     QuestionLoad();
+    QuestionsAreSelectable = true;
  
     //AFTER QUESTION LOAD
     QuestionLoadedOn = new Date().getTime();
+    
+    $("#progress_bar_value").text(RemainingTime); 
     
     ProgressBarInterval = setInterval(function() {UpdateProgressBar()}, 100);
     UpdateDurationInterval = setInterval(function() {UpdateDuration()}, 1000);
@@ -59,8 +62,10 @@ var UpdateProgressBar = function()
 }
 
 var UpdateDuration = function()
-{
+{ 
     RemainingTime--;
+    $("#progress_bar_value").text(RemainingTime);
+    
     if (RemainingTime < 0)
     {
         // Skip the question
@@ -125,8 +130,9 @@ var ShowNewQuestion = function(userAnswer)
     window.clearInterval(ProgressBarInterval);
     window.clearInterval(UpdateDurationInterval);
     
+    RemainingTime = 20;
+    
     RevertButtonsToDefault();
-    QuestionsAreSelectable = true;
     
     ProgressBarPercentage = 100;
     

@@ -159,6 +159,13 @@ body
     z-index: 200;
 }
 
+#progress_bar_value
+{
+    color: #ffffff;
+    display: block;
+    margin-top: 18%;
+}
+
 #progress_bar_border
 {
     border: 1px dotted #050708;
@@ -341,20 +348,33 @@ body
     background:url('../images/yanlis-cevap-sikki.png') no-repeat;
 }
 
-.score_content{
+.score_container
+{
+    margin: 10% auto 0;
+    padding: 0;
+    width: 90%;
+    border: 1px solid lime;
+}
+
+.score_header
+{
+    border: 1px solid red;
+    height: 100%;
+}
+
+.score_content
+{
     background: url('../images/skor_skor.png') no-repeat;
     background-size:contain;
     width:95%;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-        
+    margin: 0 auto;
+    border: 1px solid red;
 }
 
 .score_content_border
 {
     width: 90%;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
     background-color:#e8dcc0;
     -moz-border-radius: 5px;
     border-radius: 5px;

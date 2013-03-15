@@ -19,13 +19,13 @@
         <script src="scripts/jquery.disable.text.select.js" type="text/javascript"></script>
         <script src="scripts/jquery.color-2.1.0.min.js" type="text/javascript"></script>
             
-        <script src="scripts/Kelimematik/Button.js" type="text/javascript"></script> 
-            
         <script src="scripts/Kelimematik/Models/QuestionModel.js" type="text/javascript"></script>
         <script src="scripts/Kelimematik/Models/ResultModel.js" type="text/javascript"></script>
             
         <script src="scripts/Kelimematik/Service.js" type="text/javascript"></script>
         <script src="scripts/Kelimematik/Manager.js" type="text/javascript"></script>
+            
+        <script src="scripts/Kelimematik/Button.js" type="text/javascript"></script> 
 
         <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
         <link href="styles/main.css" rel="stylesheet" />
@@ -36,7 +36,7 @@
     <body>
         <div id="left"></div>
         <div id="right"></div>
-        <div id="top"></div>
+        <div id="top"></div> 
         <div id="bottom"></div>
         
         <div data-role="view" class="main_container">
@@ -54,12 +54,14 @@
                         
                     </div>
                 </div>
-                <div class="header_right">
+                <div class="header_right"> 
                     <div id="skip_button" class="header_button"></div>
                 </div>
             </div>
             <div class="progress_bar_holder">
-                <div id="progress_bar_left"></div>
+                <div id="progress_bar_left">
+                    <span id="progress_bar_value"></span>                    
+                </div>
                 <div id="progress_bar_border">
                     <div id="progress_bar">
                         <div id="progress_bar_slices"></div>
@@ -130,9 +132,8 @@
             
             <div class="score_header">
                 <div class="header_left">
-                    <div id="menu_button" class="header_button"></div>
                 </div>
-            </div> 
+            </div>
            
             <div class="score_content_border"> 
                 <div class="score_content_area">
