@@ -63,10 +63,15 @@
     <Resource Include="App_Resources\Android\drawable-nodpi\splashscreen.9.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\a.png" />
     <Content Include="images\atla.png" />
+    <Content Include="images\b.png" />
     <Content Include="images\bar-sayaci.png" />
+    <Content Include="images\c.png" />
+    <Content Include="images\d.png" />
     <Content Include="images\dogru-cevap-sikki.png" />
     <Content Include="images\dogru.png" />
+    <Content Include="images\kelimematik.otf" />
     <Content Include="images\kelimematik.png" />
     <Content Include="images\menu.png" />
     <Content Include="images\pattern.png" />
@@ -81,9 +86,11 @@
     <Content Include="images\skor_yanlis.png" />
     <Content Include="images\soru-sayi-sikki.png" />
     <Content Include="images\sure-barinin-uc-kismi.png" />
+    <Content Include="images\sure.png" />
     <Content Include="images\yanlis-cevap-sikki.png" />
     <Content Include="images\yanlis.png" />
     <Content Include="index.html" />
+    <Content Include="i2ndex.html" />
     <Content Include="kendo\js\jquery.min.js" />
     <Content Include="kendo\js\kendo.mobile.min.js" />
     <Content Include="kendo\styles\images\back.png" />
@@ -97,11 +104,13 @@
     <Content Include="scripts\jquery.imgscale.js" />
     <Content Include="scripts\jquery.json-2.4.min.js" />
     <Content Include="scripts\jquery.mobile-1.3.0.min.js" />
+    <Content Include="scripts\jso.js" />
     <Content Include="scripts\Kelimematik\Button.js" />
     <Content Include="scripts\Kelimematik\Manager.js" />
     <Content Include="scripts\Kelimematik\Models\QuestionModel.js" />
     <Content Include="scripts\Kelimematik\Models\ResultModel.js" />
     <Content Include="scripts\Kelimematik\Service.js" />
+    <Content Include="scripts\main.js" />
     <Content Include="scripts\Screen.js" />
     <Content Include="scripts\String.js" />
     <Content Include="styles\main.css" />
@@ -113,6 +122,15 @@
       <Platform>Android</Platform>
       <TargetName>cordova.js</TargetName>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <CordovaPlugin Include="com.phonegap.plugins.childbrowser">
+      <Version>4.0.0</Version>
+      <Name>Child Browser</Name>
+    </CordovaPlugin>
+  </ItemGroup>
+  <ItemGroup>
+    <CordovaPluginContent Include="com.phonegap.plugins.childbrowser\childbrowser.js" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Telerik\ICE\Tools\Mobile\MobileTools.targets" />
 </Project>

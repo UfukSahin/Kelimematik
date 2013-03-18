@@ -1,7 +1,15 @@
+
+@font-face {
+	font-family: kelimematik;
+	src: url('../images/kelimematik.otf');
+}
+
 body
 {
-    font: Arial, sans-serif;
     text-align: center;   
+    font-family: 'kelimematik';
+    color:Black;
+
     
     background-image:url('../images/pattern.png');
     background-repeat:repeat;
@@ -30,71 +38,63 @@ body
         }
 .header
 {
-    width:100%;
-    display: table;
+    margin: 0 auto;
+    width:85%;
 }
 
 .header_left
 {
-    padding-top: 0.5em;
-    width:25%;
-    display: table-cell;
+    width:30%;
     float: left;
 }
 
 .header_center
 {
-    width:50%;
-    vertical-align: top;
-    
-    display: table-cell;
+    display:inline-block;
+    width:30%;
  }
 
-#menu_button
+.header_right
 {
-    margin-left:15%;
-    width:300%;
-    background: url('../images/menu.png') no-repeat;
-    background-size:contain;
+    float:right;
+    width:30%;
 }
 
 #header_center_true
 {
-    float:left;
     background: url('../images/dogru.png') no-repeat;
-    background-size:contain;
-    width:45%;
 }
 
 #header_center_false
 {
-    float:right;
     background: url('../images/yanlis.png') no-repeat;
+}
+
+.header_center_img
+{
+    border: 1px solid transparent;
     background-size:contain;
-    width:45%;
 }
 
-#header_center_true_text
+#header_center_true_text, #header_center_false_text
 {
     display: block;
-    margin-top: 47%;
-    color: #ffffff;
-    font-size: 1.5em;
-}
-
-#header_center_false_text
-{
-    display: block;
-    margin-top: 47%;
-    color: #ffffff;
+    margin-top: 42%;
+    
+    text-shadow:
+    -1px -1px 0 #e2dd93,
+    1px -1px 0 #e2dd93,
+    -1px 1px 0 #e2dd93,
+    1px 1px 0 #e2dd93;  
 }
 
 #skip_button
 {
-    float:right;
     width:90%;
     background: url('../images/atla.png') no-repeat;
     background-size:contain;
+    background-position:left;
+    margin: 0 auto;
 }
 
 
@@ -103,35 +103,7 @@ body
     
 }
 
-.header_right
-{
-    width:25%;
-    padding-top: 0.5em;
- 
-    display: table-cell;
-}
 
-.buttonArea,
-.footerText,
-#geoLocationContainer,
-#helloWorldInput,
-#helloWorldText
-{
-    text-align: center;
-}
-
-#txtName
-{
-    border: 1px solid #AAA;
-    border-radius: 15px;
-    position:static;
-    margin-left: 1em;
-    margin-top: 0.3em;
-    margin-bottom: 0.3em;
-    background:white;
-    color: black;
-    padding: 7px;
-}
 
 
 .main_container
@@ -161,9 +133,14 @@ body
 
 #progress_bar_value
 {
-    color: #ffffff;
     display: block;
-    margin-top: 18%;
+    margin-top: 22%;
+    
+    text-shadow:
+    -1px -1px 0 #b9e4f5,
+    1px -1px 0 #b9e4f5,
+    -1px 1px 0 #b9e4f5,
+    1px 1px 0 #b9e4f5;  
 }
 
 #progress_bar_border
@@ -219,12 +196,22 @@ body
 
 #question_number
 {
-    margin-top:5%;
-    position: absolute;
-    background-image:url('../images/soru-sayi-sikki.png');
-    background-size:contain;
     height:40%;
+    border-radius: 10%;
+    border: 3px solid #393717;
     display:table;
+    text-align:center;
+    vertical-align:middle;
+    position: absolute;
+    height:35%;
+    background: #c0bd92; /* Old browsers */
+    background: -moz-linear-gradient(top,  #c0bd92 0%, #c0bd92 50%, #a69d70 50%, #a69d70 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c0bd92), color-stop(50%,#c0bd92), color-stop(50%,#a69d70), color-stop(100%,#a69d70)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #c0bd92 0%,#c0bd92 50%,#a69d70 50%,#a69d70 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #c0bd92 0%,#c0bd92 50%,#a69d70 50%,#a69d70 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #c0bd92 0%,#c0bd92 50%,#a69d70 50%,#a69d70 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #c0bd92 0%,#c0bd92 50%,#a69d70 50%,#a69d70 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c0bd92', endColorstr='#a69d70',GradientType=0 ); /* IE6-9 */
 }
 
 #question_number_text
@@ -262,7 +249,6 @@ body
 {
     width:100%;
     height:100%;
-    font-size: 1.2em;
     
     background: #c9b792; /* Old browsers */
     background: -moz-linear-gradient(top,  #c9b792 0%, #c9b792 50%, #beaa84 50%, #beaa84 100%); /* FF3.6+ */
@@ -277,23 +263,27 @@ body
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     
-    color: #ffffff;
-    border-width:3px;
+    border-width:4px;
     border-style:solid;
+    
+    font-family:kelimematik;
+    color:#000;
+    text-shadow:
+    -1px -1px 0 #e8dcc0,
+    1px -1px 0 #e8dcc0,
+    -1px 1px 0 #e8dcc0,
+    1px 1px 0 #e8dcc0;  
     
 }
 
 .option_button_default
 {
-    border-color:#3a3818;
+    border-color:#393717;
 }
 
 .option_button_selected
 {
     border-color:#691b49;
-    -webkit-box-shadow: 1px -1px 5px rgba(105, 27, 73, 1); 
-    -moz-box-shadow:    1px -1px 5px rgba(105, 27, 73, 1);
-    box-shadow:         1px -1px 5px rgba(105, 27, 73, 1);
 }
 
 .option_button_true
@@ -303,7 +293,7 @@ body
  
 .option_button_false
 {
-    border-color:#7a1219;
+    border-color:#7b1219;
 }
 
 .option_button_image
@@ -313,39 +303,97 @@ body
     height:84%;
     
     left: 0px;
-    top:8%;
-    text-align:left;
-    background-size:contain;
-    display:table;
-    
-    border-radius: 50%;
-    border: 3px solid #3a3818;
-    
+    margin-top:-17%;    
+    border-radius: 20%;
+    border: 3px solid transparent;
+
     background-color: #c9b792;
+    display:table;
 }
 
-.option-button-selection
+.option-button-image-common
 {
+    height:100%;
+    width:100%;
+    border-radius: 20%;
+    border: 3px solid #393717;
     display:table-cell;
-    vertical-align:middle;
     text-align:center;
-}
-
-.option_button_selection_circle
-{
-    display:table-cell;
     vertical-align:middle;
-    text-align:center;
+}
+.option-button-image-default
+{
+
+    background: #c0bd92; /* Old browsers */
+    background: -moz-linear-gradient(top,  #c0bd92 0%, #c0bd92 50%, #a69d70 50%, #a69d70 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c0bd92), color-stop(50%,#c0bd92), color-stop(50%,#a69d70), color-stop(100%,#a69d70)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #c0bd92 0%,#c0bd92 50%,#a69d70 50%,#a69d70 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #c0bd92 0%,#c0bd92 50%,#a69d70 50%,#a69d70 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #c0bd92 0%,#c0bd92 50%,#a69d70 50%,#a69d70 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #c0bd92 0%,#c0bd92 50%,#a69d70 50%,#a69d70 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c0bd92', endColorstr='#a69d70',GradientType=0 ); /* IE6-9 */
+    
 }
 
-.option_button_true_image
+.option-button-image-selected
 {
-    background:url('../images/dogru-cevap-sikki.png') no-repeat;
+    background: #a13895; /* Old browsers */
+    background: -moz-linear-gradient(top,  #a13895 0%, #a13895 50%, #8c2f73 50%, #8c2f73 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a13895), color-stop(50%,#a13895), color-stop(50%,#8c2f73), color-stop(100%,#8c2f73)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #a13895 0%,#a13895 50%,#8c2f73 50%,#8c2f73 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #a13895 0%,#a13895 50%,#8c2f73 50%,#8c2f73 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #a13895 0%,#a13895 50%,#8c2f73 50%,#8c2f73 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #a13895 0%,#a13895 50%,#8c2f73 50%,#8c2f73 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a13895', endColorstr='#8c2f73',GradientType=0 ); /* IE6-9 */
+}
+.option-button-image-true
+{
+    background: #1c9847; /* Old browsers */
+    background: -moz-linear-gradient(top,  #1c9847 0%, #1c9847 50%, #198239 50%, #198239 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1c9847), color-stop(50%,#1c9847), color-stop(50%,#198239), color-stop(100%,#198239)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #1c9847 0%,#1c9847 50%,#198239 50%,#198239 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #1c9847 0%,#1c9847 50%,#198239 50%,#198239 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #1c9847 0%,#1c9847 50%,#198239 50%,#198239 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #1c9847 0%,#1c9847 50%,#198239 50%,#198239 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c9847', endColorstr='#198239',GradientType=0 ); /* IE6-9 */
+}
+.option-button-image-false
+{
+    background: #bd2626; /* Old browsers */
+    background: -moz-linear-gradient(top,  #bd2626 0%, #bd2626 50%, #a8201e 50%, #a8201e 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bd2626), color-stop(50%,#bd2626), color-stop(50%,#a8201e), color-stop(100%,#a8201e)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #bd2626 0%,#bd2626 50%,#a8201e 50%,#a8201e 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #bd2626 0%,#bd2626 50%,#a8201e 50%,#a8201e 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #bd2626 0%,#bd2626 50%,#a8201e 50%,#a8201e 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #bd2626 0%,#bd2626 50%,#a8201e 50%,#a8201e 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bd2626', endColorstr='#a8201e',GradientType=0 ); /* IE6-9 */
 }
 
-.option_button_false_image
+.option-button-text
+{    
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+}
+
+#option-button-a
 {
-    background:url('../images/yanlis-cevap-sikki.png') no-repeat;
+    background-image:url('../images/a.png');
+}
+
+#option-button-b
+{
+    background-image:url('../images/b.png');
+}
+
+#option-button-c
+{
+    background-image:url('../images/c.png');
+}
+
+#option-button-d
+{
+    background-image:url('../images/d.png');
 }
 
 .score_container
@@ -353,12 +401,10 @@ body
     margin: 10% auto 0;
     padding: 0;
     width: 90%;
-    border: 1px solid lime;
 }
 
 .score_header
 {
-    border: 1px solid red;
     height: 100%;
 }
 
@@ -366,14 +412,13 @@ body
 {
     background: url('../images/skor_skor.png') no-repeat;
     background-size:contain;
-    width:95%;
+    height:60%;
     margin: 0 auto;
-    border: 1px solid red;
 }
 
 .score_content_border
 {
-    width: 90%;
+    width: 94%;
     margin: 0 auto;
     background-color:#e8dcc0;
     -moz-border-radius: 5px;
@@ -385,13 +430,96 @@ body
 
 .score_content_area 
 {
+    background-color: #ad9e7f;
     border: 3px solid black;
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+
+.score_content_images
+{
+    width:90%;
+    margin: 0 auto;
+}
+
+#score_time
+{
+    float:left;
+    background: url('../images/skor_sure.png') no-repeat;
+    background-size:contain;
+    width:28%;
+}
+
+#score_true
+{
+    display: inline-block;
+    margin:0 auto;
+    background: url('../images/skor_dogru.png') no-repeat;
+    background-size:contain;
+    width:28%;
+}
+
+#score_false
+{
+    float:right;
+    background: url('../images/skor_yanlis.png') no-repeat;
+    background-size:contain;
+    width:28%;
+}
+
+
+.score_font_size
+{
+    display: block;
+    margin-top: 43%;
+    
+    text-shadow:
+    -1px -1px 0 #e2dd93,
+    1px -1px 0 #e2dd93,
+    -1px 1px 0 #e2dd93,
+    1px 1px 0 #e2dd93;  
+}
+
+#score_text
+{
+    display: block;
+    padding-top: 31%;
+    
+    text-shadow:
+    -1px -1px 0 #e2dd93,
+    1px -1px 0 #e2dd93,
+    -1px 1px 0 #e2dd93,
+    1px 1px 0 #e2dd93;  
 }
 
 .score_center_img{
 }
 
-.score_content_images{
+#score_publish
+{
+    margin: 0 auto;
+}
+
+#score_publish_facebook
+{   
+    float:left;
+    background: url('../images/skor_facebook.png') no-repeat;
+    background-size:contain;
+}
+
+#score_publish_twitter
+{   
+    float:right;
+    background: url('../images/skor_twitter.png') no-repeat;
+    background-size:contain;
+}
+
+#repeat_button
+{
+    margin: 0 auto;
+    background: url('../images/skor_tekrar.png') no-repeat;
+    background-size:contain;
 }
