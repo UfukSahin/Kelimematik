@@ -17,12 +17,10 @@ var givePercentageHeight = {
     "publish_buttons": 0.11,
     "repeat_button": 0.2,
     "score_content_images": 0.04,
-    
+    "start_sceen_container": 1
 }
 
 $(document).ready(function() {
-           
-    
     
     var element;
     document.addEventListener('touchstart', function(event) {
@@ -35,13 +33,12 @@ $(document).ready(function() {
         var touch = event.touches[0]; 
         if (element !== document.elementFromPoint(touch.pageX,touch.pageY)) {
             DeselectAll();
-        }
+        } 
     }, false);
-    
     
     for (var className in givePercentageHeight)
     {
-        $("." + className).css("height", screen.height *  givePercentageHeight[className]);
+        $("." + className).css("height", window.innerHeight *  givePercentageHeight[className]);
     }
         
     $(".option_button_image").css("margin-left", $(".option_button_image").css("height").replace("px", "")*-0.7);
@@ -91,20 +88,16 @@ $(document).ready(function() {
     $(".score_font_size").css("font-size", $(".score_center_img").css("height").replace("px", "")*0.3 + "px");
     $("#score_text").css("font-size", $(".score_content").css("height").replace("px", "")*0.15 + "px");
     
+    $(".play_button_inner").css("font-size", $(".play_button_inner").css("height").replace("px", "")*0.6 + "px");
+    $(".start_screen_connection_fail").css("font-size", $(".play_button_inner").css("height").replace("px", "")*0.212 + "px");
+    
     //ortak
     var that = this;
     $(".option_button_image").click(function(e){that.onMenuClick();});
     
     
-    $(".main_container").hide();
-    //$(".score_container").hide();
+    $(".score_container").hide();
         
-        
-    this.onMenuClick = function(){
-        
-    };
-    
-    
 });
 
 

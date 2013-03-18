@@ -525,13 +525,71 @@ body
     background-size:contain;
 }
 
-.start_sceen{
-    background: #000000;
+.start_sceen_container
+{
+    background: rgba(0,0,0,0.7);
     position:absolute;
-    z-index: 1000;
     width: 100%;
-    height:100%;
-    opacity: 0.5;
-    
+    z-index: 1000;
+}
+
+.start_screen_border
+{
+    border: 2px dashed white;
+    width: 80%;
+    height: 40%;
+    margin: 30% auto 0;
+}
+
+.start_screen
+{
+    width: 100%;
+    height: 100%;
+    z-index:2000;
+    background-image:url('../images/pattern.png');
+    background-repeat:repeat;
+    -moz-box-shadow: inset 0 0 0 4px #c8b694;
+    -webkit-box-shadow: inset 0 0 0 4px #c8b694;
+    box-shadow: inset 0 0 0 4px #c8b694;
+}
+
+.start_screen_logo
+{
+    width: 80%;
+    height: 50%;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+.start_screen_logo img
+{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.start_screen_connection_fail
+{
+    font-size: 1em;
+}
+
+.play_button_container
+{
+    border: 2px dashed black;
+    width: 60%;
+    height: 30%;
+    margin: 7% auto;
+    padding: 2% 2%;
+    display: table;
+    background-color: #63433c;
+}
+
+.play_button_inner
+{
+    margin: 0 auto;
+    border: 1px solid black;
+    background-color: #c9a28f;
+    font-size: 1.2em;
+    display: table-cell;
+    vertical-align: middle;
 }
 

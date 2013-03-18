@@ -8,7 +8,7 @@ var InitializeManager = function()
     QuestionCountInTest = 20;
     QuestionDefaultDuration = 20;
     
-    GetQuestions(20, QuestionsLoaded);
+    GetQuestions(20, QuestionsLoaded); 
 }
 
 var QuestionsLoaded = function(data)
@@ -109,6 +109,9 @@ var QuestionAnswer = function(userChoice)
 
 var QuestionSkip = function()
 {
+    window.clearInterval(ProgressBarInterval);
+    window.clearInterval(UpdateDurationInterval);
+    
     QuestionResult = null;
     QuestionsAreSelectable = false;
     window.setTimeout(function(){ShowCorrectAnswer(0)}, 100);
@@ -180,16 +183,21 @@ var Finish = function()
 
 var StartGame = function()
 {
-    InitializeManager();
-    
-    $(".main_container").show();
-    $(".score_container").hide()
+    if (navigator.onLine)
+    {
+        InitializeManager();
+        
+        $(".start_sceen_container").hide();
+        $(".score_container").hide();
+        $(".main_container").show();
+        
+        ShowStartSceneConnectionState(true);
+    }
+    else
+    {
+        ShowStartSceneConnectionState(false);
+    }
 }
-
-$(document).ready(function() {
-    StartGame();
-});
-
 
 var PublishOnTwitter = function()
 {
@@ -235,4 +243,10 @@ function twitterLocChanged(loc)
         window.plugins.childBrowser.close();
         app.navigate("#tabstrip-home");
     }
+}
+
+var ShowStartSceneConnectionState = function(connectionState)
+{
+        $(".start_screen_connection_fail").text(connectionState ? "": "İNTERNET BAĞLANTISI BAŞARISIZ!");
+        $(".play_button_container").css("margin-top", connectionState ? "7%" : 0);
 }

@@ -71,6 +71,7 @@
     <Content Include="images\d.png" />
     <Content Include="images\dogru-cevap-sikki.png" />
     <Content Include="images\dogru.png" />
+    <Content Include="images\kelimematik-logo.png" />
     <Content Include="images\kelimematik.otf" />
     <Content Include="images\kelimematik.png" />
     <Content Include="images\menu.png" />

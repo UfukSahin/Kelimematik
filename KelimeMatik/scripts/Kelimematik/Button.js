@@ -1,8 +1,11 @@
 $(".option_button").live("touchstart", function(e) {
-    //alert(toObjectSource(e));
     ButtonSelected($(this));
-    
 });
+$(".play_button_container").live("touchstart", function(e) {
+    $(".play_button_inner").css("background-color", "#7d594c");
+});
+
+
 
   var toObjectSource = function(obj)   {
      if(obj === null)   {
@@ -24,33 +27,12 @@ $(".option_button").live("touchstart", function(e) {
      }
      return str + "]";
   }
-/*
-var element;
-$(this).get().addEventListener('touchstart', function(event) {
-    event.preventDefault();
-    var touch = event.touches[0];
-    element = document.elementFromPoint(touch.pageX,touch.pageY);
-}, false);
-
-$(this).get().addEventListener('touchmove', function(event) {
-    event.preventDefault();
-    var touch = event.touches[0];
-    if (element !== document.elementFromPoint(touch.pageX,touch.pageY)) {
-        DeselectAll();
-    }
-}, false); 
-  */ 
-/*}).live("touchmove", function(e) {
-    e.preventDefault();
-    var touch = e.touches[0];
-    if (element !== document.elementFromPoint(touch.pageX,touch.pageY)) {
-        ButtonDeselected($(this))
-    }*/
 
 var DeselectAll = function()
 {
     $(".option_button").removeClass("option_button_selected");
     $(".option-button-image-common").removeClass("option-button-image-selected");
+    $(".play_button_inner").css("background-color", "#c9a28f");
 }
 
 var ButtonSelected = function(jqueryObj)

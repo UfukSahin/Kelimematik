@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html>
     
-     <div id class="start_sceen"></div>
+     <div class="start_sceen_container">
+         <div class="start_screen_border">
+             <div class="start_screen">
+                 
+                 <div class="start_screen_logo"><img src="images/kelimematik-logo.png" alt="" /></div>
+                 <div class="start_screen_connection_fail"></div>
+                 <div class="play_button_container">
+                     <div class="play_button_inner" onClick="StartGame();">OYUNA BAŞLA</div>
+                 </div>
+                 
+             </div>
+         </div>
+     </div>
         
     
     <head>
@@ -80,10 +92,10 @@
                  
                     <div id="question_number">
                      
-                        <div id="question_number_text">asdasd</div>
+                        <div id="question_number_text"></div>
                     </div>
                     <div class="question_text_inner">
-                        Bekleyin...
+                        KELİMEMATİK
                     
                     </div>
                 </div>
@@ -143,12 +155,12 @@
             <div class="score_content_border"> 
                 <div class="score_content_area">
                     <div class="score_content_images">
-                        <div id="score_time" class="score_center_img"><div id="score_time_text" class="score_font_size">90 sn</div></div>
-                        <div id="score_true" class="score_center_img"><div id="score_true_text" class="score_font_size">10</div></div>
-                        <div id="score_false" class="score_center_img"><div id="score_false_text" class="score_font_size">8</div></div>
+                        <div id="score_time" class="score_center_img"><div id="score_time_text" class="score_font_size"></div></div>
+                        <div id="score_true" class="score_center_img"><div id="score_true_text" class="score_font_size"></div></div>
+                        <div id="score_false" class="score_center_img"><div id="score_false_text" class="score_font_size"></div></div>
                     </div>  
                     <div class="score_content">
-                        <div id="score_text">4000</div>
+                        <div id="score_text"></div>
                     </div>
                     <div id="score_publish" class="publish_buttons">
                         <div id="score_publish_facebook" class="publish_buttons" onclick="PublishOnFacebook(); return false;"></div>
