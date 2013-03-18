@@ -41,7 +41,7 @@ var QuestionStart = function()
     }
         
     CurrentQuestionNumber++;
-    //$("#question_number_text").text(CurrentQuestionNumber + "/" + QuestionCountInTest);
+    $("#question_number_text").text(CurrentQuestionNumber + "/" + QuestionCountInTest);
     
     QuestionLoad();
     QuestionsAreSelectable = true;

@@ -172,7 +172,6 @@ body
     -webkit-border-radius: 5px;
 }
 
-
 .question_text_border
 {
     width: 80%;
@@ -194,16 +193,21 @@ body
     display: table;
 }
 
+.question_number_border{
+    border: 3px dotted #615524;
+    width:15%;
+    height: 40%;
+    
+}
+
 #question_number
 {
     height:40%;
-    border-radius: 10%;
     border: 3px solid #393717;
     display:table;
     text-align:center;
     vertical-align:middle;
     position: absolute;
-    height:35%;
     background: #c0bd92; /* Old browsers */
     background: -moz-linear-gradient(top,  #c0bd92 0%, #c0bd92 50%, #a69d70 50%, #a69d70 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c0bd92), color-stop(50%,#c0bd92), color-stop(50%,#a69d70), color-stop(100%,#a69d70)); /* Chrome,Safari4+ */
@@ -228,28 +232,28 @@ body
 
 .option_buttons
 {
-    width: 80%;
-    margin: 5% auto 0 auto;
+    width: 95%;
+    margin: 5% auto 0 10%;
+    
 }
 .option_button_border
 {
     position:relative;
     display: block;
     width: 100%;
-    margin: 8% 0;
-    height: 16%;
+    margin-top: 3%;
+    height: 19%;
     
     -moz-border-radius: 5px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
-    
+    margin-left: 7%;
     border: 2px dotted #a6957b;
 }
 .option_button
 {
     width:100%;
     height:100%;
-    
     background: #c9b792; /* Old browsers */
     background: -moz-linear-gradient(top,  #c9b792 0%, #c9b792 50%, #beaa84 50%, #beaa84 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9b792), color-stop(50%,#c9b792), color-stop(50%,#beaa84), color-stop(100%,#beaa84)); /* Chrome,Safari4+ */
@@ -301,10 +305,8 @@ body
     position:absolute; 
     width:100%;
     height:84%;
-    
-    left: 0px;
-    margin-top:-17%;    
-    border-radius: 20%;
+    left: -8%;
+    top: 10%;
     border: 3px solid transparent;
 
     background-color: #c9b792;
@@ -315,7 +317,6 @@ body
 {
     height:100%;
     width:100%;
-    border-radius: 20%;
     border: 3px solid #393717;
     display:table-cell;
     text-align:center;
@@ -523,3 +524,14 @@ body
     background: url('../images/skor_tekrar.png') no-repeat;
     background-size:contain;
 }
+
+.start_sceen{
+    background: #000000;
+    position:absolute;
+    z-index: 1000;
+    width: 100%;
+    height:100%;
+    opacity: 0.5;
+    
+}
+

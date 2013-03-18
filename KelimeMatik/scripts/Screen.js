@@ -22,6 +22,8 @@ var givePercentageHeight = {
 
 $(document).ready(function() {
            
+    
+    
     var element;
     document.addEventListener('touchstart', function(event) {
         var touch = event.touches[0];
@@ -30,7 +32,7 @@ $(document).ready(function() {
     
     document.addEventListener('touchmove', function(event) {
         event.preventDefault();
-        var touch = event.touches[0];
+        var touch = event.touches[0]; 
         if (element !== document.elementFromPoint(touch.pageX,touch.pageY)) {
             DeselectAll();
         }
@@ -42,20 +44,21 @@ $(document).ready(function() {
         $("." + className).css("height", screen.height *  givePercentageHeight[className]);
     }
         
-    $(".option_button_image").css("margin-left", $(".option_button_image").css("height").replace("px", "")*-1.3);
+    $(".option_button_image").css("margin-left", $(".option_button_image").css("height").replace("px", "")*-0.7);
     $(".option_button_image").css("width", $(".option_button_image").css("height"));
-
+    $(".option_button_image").css("height", $(".option_button").css("height") * 0.8);
+    
     $(".option_button_border").css("width", $(".option_button_border").css("width").replace("px", "")*0.8);
     
     
-    $(".option_button").css("font-size", $(".option_button").css("height").replace("px", "")*0.4 + "px");
+    $(".option_button").css("font-size", $(".option_button").css("height").replace("px", "")*0.36  + "px");
     
     
-    /*$("#question_number").css("margin-top", $("#question_number").css("height").replace("px", "")*-0.16);
-    $("#question_number").css("margin-left", $("#question_number").css("height").replace("px", "")*4.2);
+    $("#question_number").css("margin-top", $("#question_number").css("height").replace("px", "")*-0.5);
+    $("#question_number").css("margin-left", $("#question_number").css("height").replace("px", "")*-1);
     $("#question_number").css("width", $("#question_number").css("height").replace("px", "")*2 + "px");
     $("#question_number_text").css("font-size", $("#question_number_text").css("height").replace("px", "")*0.7 + "px");
-    */
+    
     $("#header_center_true_text").css("font-size", $(".header").css("height").replace("px", "")*0.5 + "px");
     $("#header_center_false_text").css("font-size", $(".header").css("height").replace("px", "")*0.5 + "px");
     
