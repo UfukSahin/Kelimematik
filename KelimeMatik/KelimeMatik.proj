@@ -3,16 +3,16 @@
   <PropertyGroup>
     <ProjectGuid>c006572c-c7cc-402d-9d46-6ac86d905fd7</ProjectGuid>
     <ProjectTypeGuids>{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}</ProjectTypeGuids>
-    <AppIdentifier>U4RYQ5U5LW.com.us.kelimematik</AppIdentifier>
+    <AppIdentifier>com.us.kelimematik</AppIdentifier>
     <ProjectName>KelimeMatik</ProjectName>
     <IsRunnable>true</IsRunnable>
     <TemplateAppName>Cordova220</TemplateAppName>
     <AndroidPermissions>android.permission.INTERNET;android.permission.WRITE_EXTERNAL_STORAGE;android.permission.ACCESS_NETWORK_STATE</AndroidPermissions>
     <DeviceOrientations>Portrait</DeviceOrientations>
-    <iOSStatusBarStyle>Default</iOSStatusBarStyle>
+    <iOSStatusBarStyle>Hidden</iOSStatusBarStyle>
     <AndroidHardwareAcceleration>true</AndroidHardwareAcceleration>
     <BundleVersion>1.0</BundleVersion>
-    <iOSDisplayName />
+    <iOSDisplayName>Kelimematik</iOSDisplayName>
     <AndroidVersionCode>1</AndroidVersionCode>
     <iOSDeviceFamily>1;2</iOSDeviceFamily>
   </PropertyGroup>
@@ -92,7 +92,6 @@
     <Content Include="images\yanlis-cevap-sikki.png" />
     <Content Include="images\yanlis.png" />
     <Content Include="index.html" />
-    <Content Include="i2ndex.html" />
     <Content Include="kendo\js\jquery.min.js" />
     <Content Include="kendo\js\kendo.mobile.min.js" />
     <Content Include="kendo\styles\images\back.png" />
@@ -105,7 +104,6 @@
     <Content Include="scripts\jquery.disable.text.select.js" />
     <Content Include="scripts\jquery.imgscale.js" />
     <Content Include="scripts\jquery.json-2.4.min.js" />
-    <Content Include="scripts\jquery.mobile-1.3.0.min.js" />
     <Content Include="scripts\jso.js" />
     <Content Include="scripts\Kelimematik\Button.js" />
     <Content Include="scripts\Kelimematik\Manager.js" />
