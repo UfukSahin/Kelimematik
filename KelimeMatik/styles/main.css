@@ -60,6 +60,44 @@ body
     width:30%;
 }
 
+#skip_button
+{
+    background-color: #3f2620;
+    margin: 10% auto 0;
+    border: 1px dashed black;
+    -border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+#skip_button_inner
+{
+    width: 85%;
+    height: 85%;
+    border: 1px solid black;
+    -border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    position: relative;
+    top: 8%;
+    margin: 0 auto 0;
+    background-color: #caa28e;
+    display: table;
+}
+
+#skip_button_text
+{
+    display: table-cell;
+    vertical-align: middle;
+    font-family:kelimematik;
+    color:#000;
+    text-shadow:
+    -1px -1px 0 #e8dcc0,
+    1px -1px 0 #e8dcc0,
+    -1px 1px 0 #e8dcc0,
+    1px 1px 0 #e8dcc0; 
+}
+
 #header_center_true
 {
     background: url('../images/dogru.png') no-repeat;
@@ -87,30 +125,6 @@ body
     -1px 1px 0 #e2dd93,
     1px 1px 0 #e2dd93;  
 }
-
-#skip_button
-{
-    width:90%;
-    background: url('../images/atla.png') no-repeat;
-    background-size:contain;
-    background-position:left;
-    margin: 0 auto;
-}
-
-
-.auto_height
-{
-    
-}
-
-
-
-
-.main_container
-{
-
-}
-
 
 .progress_bar_holder
 {
@@ -277,7 +291,6 @@ body
     1px -1px 0 #e8dcc0,
     -1px 1px 0 #e8dcc0,
     1px 1px 0 #e8dcc0;  
-    
 }
 
 .option_button_default
@@ -518,13 +531,6 @@ body
     background-size:contain;
 }
 
-#repeat_button
-{
-    margin: 0 auto;
-    background: url('../images/skor_tekrar.png') no-repeat;
-    background-size:contain;
-}
-
 .start_sceen_container
 {
     background: rgba(0,0,0,0.7);
@@ -582,14 +588,74 @@ body
     display: table;
     background-color: #63433c;
 }
+.play_button_container_selected
+{
+    background-color: #40231d;
+}
 
 .play_button_inner
 {
     margin: 0 auto;
     border: 1px solid black;
-    background-color: #c9a28f;
-    font-size: 1.2em;
     display: table-cell;
     vertical-align: middle;
+    
+    background: #c9a28f; /* Old browsers */
+    background: -moz-linear-gradient(top,  #c9a28f 0%, #c9a28f 50%, #be9380 50%, #be9380 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9a28f), color-stop(50%,#c9a28f), color-stop(50%,#be9380), color-stop(100%,#be9380)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #c9a28f 0%,#c9a28f 50%,#be9380 50%,#be9380 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #c9a28f 0%,#c9a28f 50%,#be9380 50%,#be9380 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #c9a28f 0%,#c9a28f 50%,#be9380 50%,#be9380 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #c9a28f 0%,#c9a28f 50%,#be9380 50%,#be9380 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9a28f', endColorstr='#be9380',GradientType=0 ); /* IE6-9 */
 }
 
+.play_button_inner_selected
+{
+    background: #7d594c; /* Old browsers */
+    background: -moz-linear-gradient(top,  #7d594c 0%, #7d594c 50%, #785346 50%, #785346 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d594c), color-stop(50%,#7d594c), color-stop(50%,#785346), color-stop(100%,#785346)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #7d594c 0%,#7d594c 50%,#785346 50%,#785346 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #7d594c 0%,#7d594c 50%,#785346 50%,#785346 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #7d594c 0%,#7d594c 50%,#785346 50%,#785346 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #7d594c 0%,#7d594c 50%,#785346 50%,#785346 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d594c', endColorstr='#785346',GradientType=0 ); /* IE6-9 */
+}
+
+#repeat_button
+{
+    background-color: #982c1f;
+    margin: 5% auto 0;
+    border: 1px dashed black;
+    -border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+#repeat_button_inner
+{
+    width: 85%;
+    height: 85%;
+    border: 1px solid black;
+    -border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    position: relative;
+    top: 8%;
+    margin: 0 auto 0;
+    background-color: #cf6830;
+    display: table;
+}
+
+#repeat_button_text
+{
+    display: table-cell;
+    vertical-align: middle;
+    font-family:kelimematik;
+    color:#000;
+    text-shadow:
+    -1px -1px 0 #e8dcc0,
+    1px -1px 0 #e8dcc0,
+    -1px 1px 0 #e8dcc0,
+    1px 1px 0 #e8dcc0; 
+}

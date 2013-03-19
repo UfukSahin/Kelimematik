@@ -2,7 +2,13 @@ $(".option_button").live("touchstart", function(e) {
     ButtonSelected($(this));
 });
 $(".play_button_container").live("touchstart", function(e) {
-    $(".play_button_inner").css("background-color", "#7d594c");
+    $(".play_button_inner").addClass("play_button_inner_selected");
+});
+$("#skip_button_inner").live("touchstart", function(e) {
+    $("#skip_button_inner").css("background-color", "#805b4d");
+});
+$("#repeat_button_inner").live("touchstart", function(e) {
+    $("#repeat_button_inner").css("background-color", "#833016");
 });
 
 
@@ -32,7 +38,10 @@ var DeselectAll = function()
 {
     $(".option_button").removeClass("option_button_selected");
     $(".option-button-image-common").removeClass("option-button-image-selected");
-    $(".play_button_inner").css("background-color", "#c9a28f");
+    
+    $(".play_button_inner").removeClass("play_button_inner_selected");
+    $("#skip_button_inner").css("background-color", "#caa28e"); 
+    $("#repeat_button_inner").css("background-color", "#cf6830");
 }
 
 var ButtonSelected = function(jqueryObj)

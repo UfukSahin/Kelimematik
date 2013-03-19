@@ -82,22 +82,23 @@ $(document).ready(function() {
     $("#repeat_button").css("width", $("#repeat_button").css("height"));
     $("#repeat_button").css("margin-top", $("#repeat_button").css("height").replace("px", ""));
     
-    
     $(".score_content_images").css("margin-top", $(".score_content_images").css("height").replace("px", "")*-0.03);
     
     $(".score_font_size").css("font-size", $(".score_center_img").css("height").replace("px", "")*0.3 + "px");
     $("#score_text").css("font-size", $(".score_content").css("height").replace("px", "")*0.15 + "px");
     
-    $(".play_button_inner").css("font-size", $(".play_button_inner").css("height").replace("px", "")*0.6 + "px");
+    $(".play_button_inner").css("font-size", $(".play_button_inner").css("height").replace("px", "")*0.5 + "px");
     $(".start_screen_connection_fail").css("font-size", $(".play_button_inner").css("height").replace("px", "")*0.212 + "px");
+    
+    $("#skip_button_text").css("font-size", $("#skip_button_inner").css("height").replace("px", "")*0.4 + "px");
+    
+    $("#repeat_button_text").css("font-size", $("#repeat_button_inner").css("height").replace("px", "")*0.3 + "px");
     
     //ortak
     var that = this;
     $(".option_button_image").click(function(e){that.onMenuClick();});
     
-    
     $(".score_container").hide();
-        
 });
 
 

@@ -115,6 +115,8 @@ var QuestionSkip = function()
     QuestionResult = null;
     QuestionsAreSelectable = false;
     window.setTimeout(function(){ShowCorrectAnswer(0)}, 100);
+    
+    $("#skip_button_inner").css("background-color", "#caa28e");
 }
 
 var ShowCorrectAnswer = function(userChoice)
