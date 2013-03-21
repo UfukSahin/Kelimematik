@@ -61,7 +61,6 @@
     <Resource Include="App_Resources\Android\drawable-hdpi\icon.png" />
     <Resource Include="App_Resources\Android\drawable-mdpi\icon.png" />
     <Resource Include="App_Resources\Android\drawable-ldpi\icon.png" />
-    <Resource Include="App_Resources\Android\drawable-nodpi\splashscreen.9.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\a.png" />
@@ -92,14 +91,7 @@
     <Content Include="images\yanlis-cevap-sikki.png" />
     <Content Include="images\yanlis.png" />
     <Content Include="index.html" />
-    <Content Include="kendo\js\jquery.min.js" />
-    <Content Include="kendo\js\kendo.mobile.min.js" />
-    <Content Include="kendo\styles\images\back.png" />
-    <Content Include="kendo\styles\images\KendoUI.ttf" />
-    <Content Include="kendo\styles\images\KendoUI.woff" />
-    <Content Include="kendo\styles\kendo.mobile.all.min.css" />
-    <Content Include="scripts\hello-world.js" />
-    <Content Include="scripts\IOSZoom.js" />
+    <Content Include="scripts\jquery.min.js" />
     <Content Include="scripts\jquery.color-2.1.0.min.js" />
     <Content Include="scripts\jquery.disable.text.select.js" />
     <Content Include="scripts\jquery.imgscale.js" />
