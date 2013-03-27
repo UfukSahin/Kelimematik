@@ -11,9 +11,9 @@
     <DeviceOrientations>Portrait</DeviceOrientations>
     <iOSStatusBarStyle>Hidden</iOSStatusBarStyle>
     <AndroidHardwareAcceleration>true</AndroidHardwareAcceleration>
-    <BundleVersion>1.0</BundleVersion>
+    <BundleVersion>1.1</BundleVersion>
     <iOSDisplayName>Kelimematik</iOSDisplayName>
-    <AndroidVersionCode>1</AndroidVersionCode>
+    <AndroidVersionCode>2</AndroidVersionCode>
     <iOSDeviceFamily>1;2</iOSDeviceFamily>
   </PropertyGroup>
   <ItemGroup>
@@ -91,6 +91,7 @@
     <Content Include="images\yanlis-cevap-sikki.png" />
     <Content Include="images\yanlis.png" />
     <Content Include="index.html" />
+    <Content Include="scripts\countly.min.js" />
     <Content Include="scripts\jquery.min.js" />
     <Content Include="scripts\jquery.color-2.1.0.min.js" />
     <Content Include="scripts\jquery.disable.text.select.js" />
@@ -98,6 +99,7 @@
     <Content Include="scripts\jquery.json-2.4.min.js" />
     <Content Include="scripts\jso.js" />
     <Content Include="scripts\Kelimematik\Button.js" />
+    <Content Include="scripts\Kelimematik\CountlyManager.js" />
     <Content Include="scripts\Kelimematik\Manager.js" />
     <Content Include="scripts\Kelimematik\Models\QuestionModel.js" />
     <Content Include="scripts\Kelimematik\Models\ResultModel.js" />

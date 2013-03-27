@@ -1,4 +1,5 @@
-var ApiAddress = "http://kelimematik.cloudapp.net/api/Words/";
+//var ApiAddress = "http://kelimematik.cloudapp.net/api/Words/";
+var ApiAddress = "http://www.altinjeton.com/kelimematik/api/Words/";
 
 var GetQuestions = function(questionCount, callback)
 {

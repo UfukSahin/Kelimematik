@@ -23,7 +23,7 @@ var Start = function()
     AnswerTrueCount = 0; 
     AnswerFalseCount = 0;
     CurrentQuestionNumber = 0;
-
+    SendStartEvent();
     QuestionStart();
     TestStartedOn = new Date().getTime();
     
@@ -180,6 +180,10 @@ var Finish = function()
     
     $(".main_container").hide();
     $(".score_container").show()
+    
+    SendFinishEvent(AnswerTrueCount, AnswerFalseCount, QuestionCountInTest, Score, testDuration);
+    
+    
     SendResult(Results);
 }
 

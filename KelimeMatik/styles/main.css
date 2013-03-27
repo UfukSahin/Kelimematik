@@ -18,6 +18,7 @@ body
     -webkit-user-select: none;
 }
 
+
 #top, #bottom, #left, #right {
 	background: #a99752;
 	position: fixed;
@@ -658,4 +659,19 @@ body
     1px -1px 0 #e8dcc0,
     -1px 1px 0 #e8dcc0,
     1px 1px 0 #e8dcc0; 
+}
+
+.ad-placeholder
+{
+    width:100%;
+    z-index:100;
+    position:fixed;
+    bottom:8px;
+}
+
+#ads
+{
+    width:90%;
+    height:100%;
+    margin:0px auto; 
 }

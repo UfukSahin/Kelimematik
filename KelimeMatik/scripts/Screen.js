@@ -1,7 +1,7 @@
 var givePercentageHeight = {
-    
-    "option_buttons": 0.5,
-    "question_text_area": 0.15,
+    "ad-placeholder" : 0.1,
+    "option_buttons": 0.48,
+    "question_text_area": 0.12,
     "header": 0.1,
     "header_button": 0.15,
     "header_center_img": 0.13,
